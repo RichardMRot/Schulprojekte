@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Medieval;
+    src: url(Seagramtfb.ttf);
+}
+
+body {
+    margin:0px;
+    font-family: Medieval;
+}
+
+
+#title {
+    position:sticky;
+    top:0vh;
+    margin:0vh;
+    background:rgb(174, 174, 174);
+    padding:1vh 0vw;
+    border-bottom:rgb(59, 59, 59) 0.6vh solid;
+    z-index:4;
+    cursor:pointer;
+}
+
+h1 {
+    margin:0vh auto;
+    font-size:3.6vw;
+    text-align:center;
+}
+
+#select {
+    min-height:38vh;
+    background:rgb(232, 228, 222);
+    border-bottom:rgb(149, 148, 148) 0.6vh solid;
+    padding:2vh 0vw;
+}
+
+#book {
+    font-size:2vw;
+    height: 8vh;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#book h2 {
+    margin:0vw;
+    margin-right:1vw;
+}
+#book select {
+    height:6vh;
+    font-family:Medieval;
+    margin-left:1vw;
+    margin-right:auto;
+    font-size:2vw;
+}
+#book div {
+    display:flex;
+    align-items:center;
+    padding: 1vh 2vw;
+    margin: 0vh 2vw;
+    cursor:pointer;
+    border-radius:0.8vw;
+}
+
+.choose {
+    width:8vh;
+    height:8vh;
+    margin:auto;
+    background:rgb(195, 181, 139);
+    border:black 0.2vw solid;
+}
+.choose:hover {
+    background:rgb(236, 219, 171);
+    border:rgb(49, 49, 49) 0.2vw solid;
+}
+.chosen {
+    background:rgb(250, 233, 176);
+    border:black 0.2vw solid;
+}
+
+#chapter, #verse {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    padding:1vh 1vw;
+    margin:2vh 0vw;
+}
+
+#chapter h2, #verse h2 {
+    font-size:2vw;
+    text-align:center;
+    width:100%;
+    margin:1vh 0vw;
+}
+
+.chooseCh, .chooseVe {
+    width:4vw;
+    height:4vw;
+    font-size:1.4vw;
+    text-align:center;
+    margin:1vh 0.4vw;
+    background:rgb(203, 182, 112);
+    cursor:pointer;
+    border-radius:0.2vw;
+    user-select:none;
+}
+#chapter .chosen, #verse .chosen {
+    background:rgb(250, 233, 176);
+    border:black 0.2vw solid;
+}
+.chooseCh p, .chooseVe p {
+    margin:1vw 0vw;
+}
+
+#search {
+    position:sticky;
+    bottom:4vh;
+    width:20vw;
+    height:6vh;
+    background:rgb(203, 182, 112);
+    border:black 0.3vw solid;
+    border-radius:0.8vw;
+    cursor:pointer;
+    text-align:center;
+    margin:1vh auto;
+    padding:1vh 0vw;
+    user-select:none;
+    display:none;
+}
+#search:hover {
+    background:rgb(244, 219, 139);
+}
+#search:active {
+    background:rgb(161, 144, 110);
+}
+
+#search p {
+    font-size:5vh;
+    margin:0vw;
+}
+
+
+#content {
+    min-height:10vh;
+}
+
+#content p {
+    font-size:2vw;
+    margin:8vh 4vw;
+}

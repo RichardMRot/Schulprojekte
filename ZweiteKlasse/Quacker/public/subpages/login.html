@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quacker - Log In</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="../scripts/login.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Quacker</h1>
+        <a id="back" href="../index.html">Back</a>
+    </nav>
+
+    <div id="log-in-box">
+        <h2>Log In</h2>
+        
+        <input type="text" placeholder="Quacker Name" id="name"><br>
+        <input type="password" placeholder="Password" id="password"><br>
+        <input type="checkbox" id="password-visibility" onclick="showPassword()"><label>Show password</label>
+        <h3 id="error"></h3>
+
+        <div id="log-in-button" onclick="login()">
+            <p>Log in!</p>
+        </div>
+        <p>Not a Quacker yet? <a href="register.html">Register!</a></p>
+    </div>
+</body>
+</html>

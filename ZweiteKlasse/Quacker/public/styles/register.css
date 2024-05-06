@@ -1,0 +1,111 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(86, 221, 255);
+    overflow: hidden;
+}
+
+nav {
+    display:flex;
+    padding: 2vh 4vw;
+    background: rgb(37, 142, 177);
+    color: rgb(255, 252, 239);
+    border-bottom: black 0.2vh solid;
+}
+
+h1 {
+    font-size:1.6rem;
+    margin: 0px;
+}
+
+#back {
+    float:right;
+    margin-left:auto;
+    font-size:1.6rem;
+    text-decoration:none;
+    color:rgb(255, 252, 239);
+}
+#back:active {
+    color:rgb(216, 214, 201);
+}
+#back:visited {
+    color:rgb(255, 252, 239);
+}
+
+#log-in-box {
+    width:100vw;
+    height:62vh;
+    margin-top:10vh;
+    padding:0px 2vw;
+    background-color:rgba(37, 142, 177, 0.4);
+    border-top:black 0.1vh solid;
+    border-bottom:black 0.1vh solid;
+    color:rgb(255, 252, 239);
+}
+
+h2 {
+    font-size:2rem;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width:50vw;
+    height:4vh;
+    font-size:1.4rem;
+}
+
+input[type="checkbox"] {
+    margin-left:0px;
+    width:5.2vw;
+    height:5.2vw;
+}
+
+label {
+    color:rgb(220, 220, 220);
+    font-size:1.3rem;
+}
+
+#log-in-button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:30vw;
+    height:6vh;
+    margin-top:4vh;
+    border:black 0.1vw solid;
+    text-align:center;
+    background-color:rgb(86, 221, 255);
+}
+#log-in-button p {
+    margin:0px;
+    font-size:1.6rem;
+}
+
+p, a {
+    margin-top:0.2vh;
+    font-size:1.2rem;
+}
+a {
+    color:rgb(255, 252, 239);
+}
+a:visited {
+    color:rgb(220, 220, 220);
+}
+
+#name {
+    margin-bottom:2vh;
+}
+#email {
+    margin-bottom:2vh;
+}
+#password-visibility1 {
+    margin-bottom:2vh;
+}
+
+#error {
+    display:none;
+    margin-top:0px;
+    color:rgb(228, 45, 45);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quacker - Register</title>
+    <link rel="stylesheet" href="../styles/register.css">
+    <script src="../scripts/register.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Quacker</h1>
+        <a id="back" href="../index.html">Back</a>
+    </nav>
+
+    <div id="log-in-box">
+        <h2>Log In</h2>
+        
+        <input type="text" placeholder="Quacker Name" id="name"><br>
+        <input type="email" placeholder="quack@quacky.com" id="email">
+        <input type="password" placeholder="Password" id="password1"><br>
+        <input type="checkbox" id="password-visibility1" onclick="showPassword1()"><label>Show password</label><br>
+        <input type="password" placeholder="Password again" id="password2"><br>
+        <input type="checkbox" id="password-visibility2" onclick="showPassword2()"><label>Show password</label><br>
+        <h3 id="error">asdasdasdasd</h3>
+
+        <div id="log-in-button" onclick="register()">
+            <p>Register!</p>
+        </div>
+        <p>Already are a Quacker? <a href="login.html">Log in!</a></p>
+    </div>
+</body>
+</html>

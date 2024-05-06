@@ -1,0 +1,73 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background: rgb(122,122,122);
+    background: linear-gradient(324deg, rgba(0,0,0,1) 0%, rgba(122,122,122,1) 100%);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    overflow:hidden;
+}
+
+h1 {
+    color:rgb(153, 181, 181);
+    text-align:center;
+    font-size:3.2vw;
+    margin:0px;
+}
+
+#tipp {
+    text-align:center;
+    width:72vw;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:rgba(0, 0, 0, 0.4);
+    border:0.3vw solid black;
+    border-radius:1vw;
+    padding:2vw;
+    margin-top:16vh;
+    color:rgb(218, 220, 243);
+}
+
+#tipp h2 {
+    margin:0px;
+    font-size:2.4vw;
+    margin-top:2vh;
+    cursor:pointer;
+}
+
+#raetsel {
+    margin-top:8vh;
+    margin-right:auto;
+    margin-left:auto;
+    padding:1vw;
+    background-color:rgb(173, 173, 173);
+    border:black 0.2vw solid;
+    color:black;
+    border-radius:0.6vw;
+    width:3.2vw;
+    cursor:pointer;
+    user-select:none;
+}
+
+#raetsel:hover {
+    background-color:white;
+}
+
+#logout {
+    position:absolute;
+    top:4vh;
+    left:2vw;
+    background-color:rgb(130, 130, 130);
+    padding:0.6vw;
+    font-size:1.5vw;
+    font-style:italic;
+    border:black 0.2vw solid;
+    border-radius:0.4vw;
+    cursor:pointer;
+    user-select:none;
+}
+#logout:hover {
+    background-color:white;
+    font-style:normal;
+    font-weight:bold;
+}

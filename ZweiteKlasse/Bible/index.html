@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div id="title" onclick="document.querySelector('body').scrollIntoView({block:'start', behavior:'smooth'})"><h1>The Holy Bible</h1></div>
+    <div id="select">   
+        <div id="book">
+            <div id="old">
+                <h2>Old Testament</h2>
+                <select name="Books"></select>
+            </div>
+            <div id="new">
+                <h2>New Testament</h2>
+                <select name="Books"></select>
+            </div>
+        </div>
+        <div id="chapter"></div>
+        <div id="verse"></div>
+        <div id="search" onclick="search(true)"><p>Full Chapter!</p></div>
+    </div>
+
+    <div id="content"><p></p></div>
+
+</body>
+</html>

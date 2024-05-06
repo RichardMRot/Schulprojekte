@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raetsel</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="scripts/login.js" defer></script>
+</head>
+<body onload="logOut()">
+    <form>
+        <h1>Login:</h1>
+        <input id="name" type="text" placeholder="Username (test)"><br>
+        <input id="password" type="password" placeholder="Password (passwort123)"><br>
+        <div id="button" onclick="logIn()">Log-in</div>
+        <p id="error">Wrong name or password.</p>
+        <p>Verfügst du über die Fähigkeiten, die für diese Rätsel benötigt werden? Nein? Toll, verschwinde!</p>
+    </form>
+</body>
+</html>

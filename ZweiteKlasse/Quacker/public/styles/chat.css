@@ -1,0 +1,113 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(86, 221, 255);
+    overflow: hidden;
+}
+
+nav {
+    display:flex;
+    padding: 2vh 4vw;
+    background: rgb(37, 142, 177);
+    color: rgb(255, 252, 239);
+    border-bottom: black 0.2vh solid;
+}
+h1 {
+    font-size:1.6rem;
+    margin: 0px;
+}
+
+#log-in {
+    float:right;
+    margin-left:auto;
+    font-size:1.6rem;
+    text-decoration:none;
+    color:rgb(255, 252, 239);
+}
+#log-in:active {
+    color:rgb(216, 214, 201);
+}
+#log-in:visited {
+    color:rgb(255, 252, 239);
+}
+
+#messages {
+    width:94vw;
+    margin-top:1vh;
+    margin-left:auto;
+    margin-right:auto;
+    overflow-y:scroll;
+    height:76vh;
+}
+
+.my-message, .other-message {
+    width:80vw;
+    padding:2vw;
+    margin:2vh 0px;
+    border:black 0.3vw solid;
+    border-radius:1vw;
+}
+@keyframes message-added-right {
+    0%  {transform:translateX(0vw);}
+    50% {transform:translateX(-4vw);}
+    100%{transform:translateX(0vw);}
+}
+.my-message {
+    text-align:right;
+    background-color:white;
+    margin-left:auto;
+}
+@keyframes message-added-left {
+    0%  {transform:translateX(0vw);}
+    50% {transform:translateX(4vw);}
+    100%{transform:translateX(0vw);}
+}
+.other-message {
+    text-align:left;
+    background-color:gray;
+}
+
+#write {
+    position:absolute;
+    bottom:0px;
+    width:96vw;
+    height:6vh;
+    margin-left:2vw;
+    margin-right:2vw;
+    margin-bottom:7vh;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#write input:nth-child(1) {
+    width:100%;
+    margin-bottom:2vh;
+}
+#write input:nth-child(2) {
+    width:80%;
+    height:100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:1.4rem;
+}
+#write #send {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:16.5%;
+    height:100%;
+    font-size:1.4rem;
+    margin-left:1%;
+    background-color:rgb(37, 142, 177);
+    border:black 0.1vw solid;
+    border-radius:0.1vw;
+}
+
+h2 {
+    margin:0px;
+}
+h3 {
+    margin:0px;
+}

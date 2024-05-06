@@ -1,0 +1,139 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background: rgb(122,122,122);
+    background: linear-gradient(40deg, rgba(122,122,122,1) 0%, rgba(0,0,0,1) 100%);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    overflow:hidden;
+}
+
+h1 {
+    color:rgb(153, 181, 181);
+    text-align:center;
+    font-size:3.2vw;
+    margin:0px;
+}
+
+#raetsel {
+    text-align:center;
+    width:72vw;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:rgba(0, 0, 0, 0.4);
+    border:0.3vw solid black;
+    border-radius:1vw;
+    padding:2vw;
+    margin-top:16vh;
+    color:rgb(218, 220, 243);
+}
+
+#raetsel h2 {
+    margin:0px;
+    font-size:2.4vw;
+    margin-top:2vh;
+}
+#raetsel h3 {
+    margin:0px;
+    font-size:1.8vw;
+    margin-top:2vh;
+}
+#raetsel h4 {
+    margin-top:2vh;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0vh;
+    padding:1vw;
+    font-size:1.6vw;
+    width:80%;
+    text-align:left;
+    background-color:rgb(0, 0, 0);
+    border:0.2vw solid rgb(214, 214, 214);
+    border-radius:0.6vw;
+    font-family:Consolas;
+    color:lime;
+}
+#raetsel .empty {
+    display:none;
+}
+
+#antwort {
+    width:64%;
+    height:4vh;
+    font-size:1.4vw;
+    margin-top:2vh;
+}
+
+#submit_box {
+    display:flex;
+}
+
+#submit_box input {
+    margin-left:auto;
+    width:50%;
+}
+
+@keyframes wrong {
+    12.5%{transform:translateX(-1vw);}
+    37.5%{transform:translateX(1vw);}
+    62.5%{transform:translateX(-1vw);}
+    87.5%{transform:translateX(1vw);}
+}
+.inputAnimation {
+    animation:wrong 0.4s ease 1;
+}
+
+#submit_button {
+    margin:0vw;
+    margin-top:auto;
+    margin-right:auto;
+    cursor:pointer;
+    padding:0.4vw;
+    font-size:1.2vw;
+    color:gray;
+    background-color:rgb(235, 235, 235);
+    border:black 0.2vw solid;
+    user-select:none;
+}
+
+#submit_button:hover {
+    color:black;
+    background-color:white;
+}
+
+#tipps {
+    margin-top:8vh;
+    margin-right:auto;
+    margin-left:auto;
+    padding:1vw;
+    background-color:rgb(173, 173, 173);
+    border:black 0.2vw solid;
+    color:black;
+    border-radius:0.6vw;
+    width:3.2vw;
+    cursor:pointer;
+    user-select:none;
+}
+
+#tipps:hover {
+    background-color:white;
+}
+
+#logout {
+    position:absolute;
+    top:4vh;
+    left:2vw;
+    background-color:rgb(130, 130, 130);
+    padding:0.6vw;
+    font-size:1.5vw;
+    font-style:italic;
+    border:black 0.2vw solid;
+    border-radius:0.4vw;
+    cursor:pointer;
+    user-select:none;
+}
+#logout:hover {
+    background-color:white;
+    font-style:normal;
+    font-weight:bold;
+}

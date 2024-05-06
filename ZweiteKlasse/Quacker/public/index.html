@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quacker</title>
+    <link rel="stylesheet" href="styles/chat.css">
+    <script src="scripts/chat.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Quacker</h1>
+        <a id="log-in" href="subpages/login.html">Log-In</a>
+    </nav>
+    <div id="messages"></div>
+    <div id="write">
+        <input type="file" id="image" placeholder="Image">
+        <input type="text" placeholder="Quack your thoughts here...">
+        <div id="send" onclick="sendMessage()">Send</div>
+    </div>
+</body>
+</html>

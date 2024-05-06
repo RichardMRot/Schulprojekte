@@ -1,0 +1,128 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background: rgb(122,122,122);
+    background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(122,122,122,1) 100%);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+#box {
+    text-align:center;
+    width:64%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:4vh;
+    background-color:rgba(152, 163, 154, 0.4);
+    border:black 0.3vw solid;
+    border-radius:0.6vw;
+}
+
+h1 {
+    font-size:3.2vw;
+    margin-bottom:0px;
+    color:white;
+}
+
+h2 {
+    font-size:1.4vw;
+    margin-top:0px;
+    color:white;
+}
+
+hr {
+    border-color:black;
+    border-width:0.2vw;
+}
+
+#button {
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:3vh;
+    background-color:rgb(184, 184, 184);
+    font-size:2vw;
+    border:black 0.2vw solid;
+    border-radius:0.2vw;
+    cursor:pointer;
+    user-select:none;
+}
+#button:hover {
+    background-color:white;
+}
+
+h3 {
+    font-size:1.8vw;
+    color:white;
+}
+
+#raetsel {
+    width:80%;
+    margin:2vh auto;
+    margin-bottom:8vh;
+}
+
+#raetsel div {
+    background-color:gray;
+    padding:4vh;
+    margin:4vh 0px;
+    border:black 0.2vw solid;
+    border-radius:0.4vw;
+}
+#raetsel div:hover {
+    scale:1.1;
+}
+
+#raetsel h2 {
+    font-size:2vw;
+}
+#raetsel h3 {
+    color:black;
+    font-size:1.6vw;
+}
+#raetsel h4 {
+    margin-top:2vh;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0vh;
+    padding:1vw;
+    font-size:1.4vw;
+    width:80%;
+    text-align:left;
+    background-color:rgb(0, 0, 0);
+    border:0.2vw solid rgb(214, 214, 214);
+    border-radius:0.6vw;
+    font-family:Consolas;
+    color:lime;
+}
+#raetsel .empty {
+    display:none;
+}
+
+span {
+    color:rgb(255, 248, 211);
+    cursor:pointer;
+}
+h3:has(span):hover {
+    scale:1.1;
+}
+
+#logout {
+    position:absolute;
+    top:4vh;
+    left:2vw;
+    background-color:rgb(130, 130, 130);
+    padding:0.6vw;
+    font-size:1.5vw;
+    font-style:italic;
+    border:black 0.2vw solid;
+    border-radius:0.4vw;
+    cursor:pointer;
+    user-select:none;
+}
+#logout:hover {
+    background-color:white;
+    font-style:normal;
+    font-weight:bold;
+}

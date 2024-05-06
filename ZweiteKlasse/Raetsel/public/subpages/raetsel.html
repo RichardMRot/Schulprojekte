@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rätsel</title>
+    <link rel="stylesheet" href="../styles/raetsel.css">
+    <script src="../scripts/raetsel.js" defer></script>
+</head>
+<body onload="checkOnload()">
+
+    <div id="logout" onclick="logout()">Log out</div>
+
+    <div id="raetsel">
+        <h1 id="title">Aktuelles Rätsel</h1>
+        
+        <div id="generate"></div>
+
+        <div id="submit_box">
+            <input type="text" id="antwort" placeholder="Deine Antwort">
+            <div id="submit_button" onclick="answer()">Submit</div>
+        </div>
+    </div>
+
+    <div id="tipps" onclick="changePage()">Tipps</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rätsel</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <script src="../scripts/all.js" defer></script>
+</head>
+<body onload="checkOnload()">
+    
+    <div id="logout" onclick="logout()">Log out</div>
+
+    <div id="box">
+        <h1>Gut gemacht!</h1>
+        <h2>Du hast alle Rätsel gelöst. :&rpar;</h2>
+        <div id="button" onclick="restart()">Neustart</div><hr>
+        <h3>Alle Rätsel - Überblick:</h3>
+        <div id="raetsel"></div>
+    </div>
+
+</body>
+</html>
