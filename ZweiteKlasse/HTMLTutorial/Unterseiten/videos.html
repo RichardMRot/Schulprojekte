@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Videos</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="home"><a href="../start.html"><img src="../Sonstiges/home.png" alt="home"></a></div>
+		
+		<div style="display:flex;">
+			<div id="text">
+				<h1>Videos</h1>
+			
+				<div class="textleft">
+					<p>Videos kann man in HTML leicht hinzufügen, genau wie Audios. Dafür gibt es den
+						<span>&lt;video&gt;</span> Element.<br> Darin muss man <span>&lt;source&gt;</span> Elemente geben, 
+						welche die Attribute <span>src="[Pfad]"</span> und <span>type="video/[Dateityp]"</span> benötigen.
+						Der Browser schaut sich die erste &lt;source&gt; an und wenn die nicht geht, 
+						schaut der Browser, ob die nächste geht.
+						<br>Damit das Audio überhaupt geht, solltest du aber im &lt;video&gt; entweder
+						den Attribut <span>autoplay</span> oder <span>controls</span> hinzufügen.
+						Wenn du aber ein YouTube Video embedden willst, benütze
+						<span>&lt;iframe&gt;</span> und geben sie den Link im <span>src="[link]"</span> Attribut ein.
+						<br>Versuche das doch gleich hier, schreibe den Code in der Box dort rechts.
+						<br>Dateipfad für das Video ist '../Sonstiges/dinosaur.mp4'
+					</p>
+					<video controls style="width:60%;">
+						<source src="../Sonstiges/dinosaur.mp4" type="video/mp4">
+						Dein Browser unterstützt dieses Audioformat nicht.
+					</video>
+					
+
+				</div>
+			</div>
+			<div style="max-width:35%;">
+				<textarea style="width:30vw;height:40vh;" id="code" placeholder="/* Dateipfad für das Video ist '../Sonstiges/dinosaur.mp4' */"></textarea>
+				<div id="button" onclick="updateCode()">Try</div>
+				<div id="showcase"><p style="color:white;">[Dein Code wird hier angezeigt werden]</p></div>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Attack!</title>
+    <link rel="stylesheet" href="../styles/game.css">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/png">
+    <script src="../scripts/game.js" defer></script>
+</head>
+<body onclick="music(0, true)">
+    <div id="background"><!--<img src="../assets/Forest.png" alt="Background Forest" id="img1">
+        <img src="../assets/Forest.png" alt="Background Forest" id="img2">-->
+    </div>
+    
+    <!--Choosing the fighter-->
+    <div id="choosetemp">
+        <h1>Choose your fighter!</h1>
+        <div id="choose">
+    
+        <div class="choosebox" id="choose1">
+            <input type="text" value="Player 1" spellcheck="false" class="nameSelect">
+            <div style="display:flex;justify-content:space-evenly;">
+            <div class="choose">
+                <img src="../assets/Fighters/NormalEnteChoose.png" alt="NormalDuck">
+                <p>10x HP;<br> 2x Damage</p>
+            </div>
+            <div class="choose">
+                <img src="../assets/Fighters/GentleentchenChoose.png" alt="Gentleentchen">
+                <p>6x HP;<br> 3x Damage</p>
+            </div>
+            <div class="choose">
+                <img src="../assets/Fighters/RitterEnteChoose.png" alt="KnightDuck">
+                <p>15x HP;<br> 1x Damage</p>
+            </div>
+            </div>
+            <div class="secretCode">
+                <input type="text" spellcheck="false" class="secretInput" placeholder="Secret"><br>
+                <div class="choose">Try</div>
+            </div>
+        </div>
+        <div class="choosebox" id="choose2">
+            <input type="text" value="Player 2" spellcheck="false" class="nameSelect">
+            <div style="display:flex;justify-content:space-evenly;">
+            <div class="choose">
+                <img src="../assets/Fighters/NormalEnteChoose.png" alt="NormalDuck">
+                <p>10x HP;<br> 2x Damage</p>
+            </div>
+            <div class="choose">
+                <img src="../assets/Fighters/GentleentchenChoose.png" alt="Gentleentchen">
+                <p>6x HP;<br> 3x Damage</p>
+            </div>
+            <div class="choose">
+                <img src="../assets/Fighters/RitterEnteChoose.png" alt="KnightDuck">
+                <p>15x HP;<br> 1x Damage</p>
+            </div>
+            </div>
+            <div class="secretCode">
+                <input type="text" spellcheck="false" class="secretInput" placeholder="Secret"><br>
+                <div class="choose">Try</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--The actual game-->
+    <div id="game"></div>
+
+    <audio class="music" src="../assets/normaltheme.wav"></audio>
+    <audio class="music" src="../assets/normaltheme.wav"></audio>
+
+    <audio id="sfx1" src="../assets/click.wav"></audio>
+    <audio id="sfx2" src="../assets/hit.wav"></audio>
+
+</body>
+</html>

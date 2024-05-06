@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Duck Chamber</title>
+	<link rel="stylesheet" href="../Styles/spritegame.css">
+	<script src="../Scripts/spritegame_main.js" defer></script>
+</head>
+<body>
+	
+    <div id="surface">
+		
+		<img id="tutorial" src="../ArtAssets/Tutorial.png" alt="Tutorial">
+		<img id ="startEgg" src="../ArtAssets/Egg.png" alt="Egg" onmouseover="eggHover(this)" 
+		onmouseleave="eggUnhover(this)" onclick="startGame()">
+		<img id="collect" src="../ArtAssets/Cash.png" alt="Money">
+
+		
+		<div id="amount">
+			<img src="../ArtAssets/Cash.png" alt="AmountOfMoney">
+			<p>2x</p>
+		</div>
+
+    	<div id="player">
+    		<img id="spriteImg" src = "../ArtAssets/Idle.gif" alt="sprite"/>
+    	</div>
+
+		<div id="wall">
+			<img id="wallImg" src="../ArtAssets/Wall.gif" alt="wall">
+			<div id="topBox"></div>
+			<div id="bottomBox"></div>
+		</div>
+
+    </div>
+
+	<h1></h1>
+
+	<div id="loseScreen"></div>
+	
+</body>
+</html>

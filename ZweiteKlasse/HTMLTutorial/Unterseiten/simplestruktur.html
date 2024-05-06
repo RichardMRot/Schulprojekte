@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Bilder</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="home"><a href="../start.html"><img src="../Sonstiges/home.png" alt="home"></a></div>
+		
+		<div id="grid">
+			<div id="text" style="width:100%;clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);">
+				<h1>Simple HTML Seite</h1>
+			
+				<div class="textleft">
+					<p>Eine HTML-Seite kann man sehr leicht aufbauen. Sie soll in <span>.html</span> enden.
+						Am Anfang des Documents soll man <span>&lt;!DOCTYPE html&gt;</span> schreiben und danach
+						beginnt man mit den Tags. Das Hauptelement ist das <span>&lt;html&gt;</span>, darin gibt es dann
+						zwei weitere Hauptelemente, <span>&lt;head&gt;</span>, welches zB für den Titel der Seite oder andere Dateien
+						die man zur Seite verknüpft verantwortlich ist und <span>&lt;body&gt;</span>, wo man das eingibt, was dann
+						auf der Seite sieht (Text, Video, usw.).
+						Versuche das einzugeben in der grünen Textbox. Da siehst hier schon wie man die Grundstruktur schreibt.
+						Experimentiere mit einigen Tags, wie zB die <span>&lt;h1&gt;</span> (größte Überschrift), <span>&lt;p&gt;</span> (Text).
+					</p>
+					<img src="../Sonstiges/code.jpg" alt="Grundstruktur HTML code" style="width:90%;">
+				</div>
+			</div>
+
+			<div style="max-width:35%;">
+				<textarea style="width:30vw;height:40vh;" id="code" placeholder='Dein Code hier'></textarea>
+				<div id="button" onclick="updateCode()">Try</div>
+				<div id="showcase"><p style="color:white;">[Dein Code wird hier angezeigt werden]</p></div>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,212 @@
+
+@keyframes change_color {
+	0%	{background: rgba(1,5,38,1);}
+	50%	{background: rgba(67,40,213,1);}
+}
+
+* {
+	-moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+body {
+	background: rgb(1,5,38,1);
+	animation: change_color 32s ease infinite;
+	font-family: Tahoma, Comic Sans Ms;
+	overflow:hidden;
+}
+
+#titles {
+	position:absolute;
+	left:40vw;
+	background-color: rgba(80, 80, 80, 0.381);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 34% 100%);
+	padding-bottom:50%;
+	padding-left:10%;
+}
+
+#title {
+	color: rgb(250, 245, 240);
+	font-size: 3.2em;
+	text-decoration: underline;
+	text-align:right;
+	margin-left: 4vw;
+	margin-right:4vw;
+	padding-top: 0.5em;
+}
+
+h2 {
+	color: rgb(240, 235, 230);
+	width: 100%;
+	text-align:right;
+	padding-left: 4vw;
+	padding-right: 4vw;
+}
+
+/* Position der ganzen NAV anpassen */
+nav {
+	position: absolute;
+	left: -14vw;
+	top:6vw;
+	user-select:none;
+}
+
+/*Hier Breite von den Elementen anpassen der NAV */
+.navlink {
+    width: 20vw; /* Breite anpassen */
+    height: 20vh; /* Höhe anpassen */
+	margin: 0px;
+	padding: 2%;
+}
+
+.navlink > div {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+	padding: 10%; /*anpassen für Textpositionierung */
+	padding-left:80%;
+	padding-right:30%;
+
+	transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.navlink > div:hover {
+	padding-left:160%;
+	padding-right:30%;
+    z-index: 2;
+  
+}
+
+.left {
+    background-color: rgb(145, 200, 213);
+	border:rgb(238, 238, 238) solid 0.3vw;
+	border-radius:3vw;
+	display:flex;
+}
+
+a {
+	position:absolute;
+	writing-mode:vertical-rl;
+	text-decoration: none;
+	font-size: 1.4em;
+	padding-left:50vw;
+	padding-right:1vw;
+	right:2vw;
+}
+
+a:visited {
+	color:black;
+}
+
+.left p {
+	position:absolute;
+	right:10vw;
+	bottom:5%;
+	margin:1vw;
+	width:8vw;
+}
+
+
+/*Background shapes thing*/
+#shapes {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+@keyframes shape {
+	0%	{transform: translateY(0) rotate(0deg);}
+	100%{transform: translateY(-120vh) rotate(720deg);}
+}
+#shapes li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 4vw;
+	height: 4vw;
+	background-color: rgba(200, 226, 246, 0.4);
+	border-radius: 8%;
+	animation: shape 20s linear infinite;
+	bottom: -6vw;
+	text-align:center;
+	color: rgba(25, 25, 25, 0.4);
+	user-select:none;
+}
+
+li p {
+	width:80%;
+}
+
+#shapes li:nth-child(1) {
+	left: 4vw;
+	animation-delay: 1s;
+	animation-duration: 25s;
+}
+
+#shapes li:nth-child(2) {
+	left: 13vw;
+	animation-delay: 4s;
+	animation-duration: 23s;
+}
+
+#shapes li:nth-child(3) {
+	left: 21vw;
+	animation-delay: 2s;
+}
+
+#shapes li:nth-child(4) {
+	left: 26vw;
+}
+
+#shapes li:nth-child(5) {
+	left: 36vw;
+	animation-delay: 1.2s;
+	animation-duration: 30s;
+}
+
+#shapes li:nth-child(6) {
+	left: 42vw;
+	animation-delay: 5s;
+}
+
+#shapes li:nth-child(7) {
+	left: 58vw;
+	animation-delay: 6s;
+	animation-duration: 16s;
+}
+
+#shapes li:nth-child(8) {
+	left: 68vw;
+	animation-delay: 4s;
+}
+
+#shapes li:nth-child(9) {
+	left: 76vw;
+	animation-delay: 5s;
+	animation-duration: 27s;
+}
+
+#shapes li:nth-child(10) {
+	left: 80vw;
+	animation-delay: 8s;
+}
+
+#shapes li:nth-child(11) {
+	left: 86vw;
+	animation-delay: 5s;
+	animation-duration: 18s;
+}
+
+#shapes li:nth-child(12) {
+	left: 92vw;
+	animation-delay: 6.2s;
+	animation-duration: 26s;
+}
+

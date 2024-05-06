@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles/start.css">
+    <script src="scripts/start.js" defer></script>
+</head>
+<body>
+    <div id="gridBackground">
+        <table></table>
+    </div>
+    <h1>TicTacToe</h1>
+
+    <h2 id="label">The classic game, but better than ever!</h2>
+    <div onmouseover="play()" id="play"><p>Hover over me to start PLAYing!</p></div>
+    <div onmouseover="shop()" id="shop"><p>Hover over me to access the SHOP!</p></div>
+
+    <img src="assets/starDecoration.png" alt="a star" id="star">
+    <img src="assets/O.png" alt="O" id="O">
+    <img src="assets/X.png" alt="X" id="X">
+
+    <div id="wins"><h3>Player 1 won x times</h3><h3>Player 2 won y times</h3></div>
+    <div id="reset" onclick="clearSave()">Reset all your data<br>!BE CAREFUL!</div>
+
+    <div id="paper"></div>
+</body>
+</html>

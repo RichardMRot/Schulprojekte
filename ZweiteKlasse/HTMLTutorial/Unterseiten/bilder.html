@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Bilder</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="home"><a href="../start.html"><img src="../Sonstiges/home.png" alt="home"></a></div>
+		
+		<div style="display:flex;">
+			<div id="text">
+				<h1>Bilder</h1>
+			
+				<div class="textleft">
+					<p>Bilder kann man in HTML sehr leicht mit nur einem Tag einbinden, den
+						<span>&lt;img&gt;</span> Element.<br> Darin muss man Attribute geben, <span>src="[Pfad]"</span> 
+						und <span>alt="[Beschreibung deines Bildes, falls es nicht angezeigt werden kann]"</span> 
+						benötigen. Wenn ein Bild nicht die passende Größe hat, kannst du sie mit den Attributen
+						<span>width=[Breite]px</span> und <span>height=[Höhe]px</span> ändern.
+						<br>Versuche das doch gleich hier, schreibe den Code in der Box dort rechts.
+						<br>Dateipfad fürs Bild ist '../Sonstiges/meme.jpg'
+					</p>
+					<img src="../Sonstiges/meme.jpg" alt="Ein lustiges Meme" style="width:60%;">
+				</div>
+			</div>
+			<div style="max-width:35%;">
+				<textarea style="width:30vw;height:40vh;" id="code" placeholder="/* Dateipfad fürs Bild ist '../Sonstiges/meme.jpg' */"></textarea>
+				<div id="button" onclick="updateCode()">Try</div>
+				<div id="showcase"><p style="color:white;">[Dein Code wird hier angezeigt werden]</p></div>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,189 @@
+@font-face {
+    font-family:Scribble;
+    src:url(../assets/Tealand.ttf);
+}
+
+body {
+    font-family:Scribble;
+    overflow:hidden;
+}
+
+img {
+    user-select:none;
+}
+
+@keyframes move {
+    0%  {transform:translateY(0vh) rotateZ(-0.8deg);}
+    25% {transform:translateY(-0.4vh) rotateZ(0.8deg);}
+    50% {transform:translateY(0vh) rotateZ(-0.8deg);}
+    75% {transform:translateY(0.4vh) rotateZ(0.8deg);}
+    100% {transform:translateY(0vh) rotateZ(-0.8deg);}
+}
+h1 {
+    font-size:6vw;
+    text-align:center;
+    animation:move 0.4s linear infinite;
+    user-select:none;
+}
+
+@keyframes move2 {
+    0%  {transform:translateY(0vh) rotateZ(-10.8deg);}
+    25% {transform:translateY(-0.4vh) rotateZ(-9.2deg);}
+    50% {transform:translateY(0vh) rotateZ(-10.8deg);}
+    75% {transform:translateY(0.4vh) rotateZ(-9.2deg);}
+    100% {transform:translateY(0vh) rotateZ(-10.8deg);}
+}
+h2 {
+    position:absolute;
+    left:60vw;
+    top:16vh;
+    transform:rotateZ(-10deg);
+    font-size:2vw;
+    width:24vw;
+    animation:move2 0.4s linear infinite;
+    user-select:none;
+}
+
+p {
+    animation:move 0.4s linear infinite 0.3s;
+    user-select:none;
+}
+
+div {
+    font-size:1.6vw;
+    text-align:center;
+    width:100%;
+    font-size:2vw;
+}
+
+#gridBackground {
+    position:absolute;
+    width:110vw;
+    height:110vh;
+    top:-0.6vw;
+    left:-1vh;
+    margin:0;
+}
+
+table {
+    opacity:0.3;
+    border: 0.2vw rgba(0, 0, 0, 0.458) solid;
+    border-collapse: collapse;
+    width:110vw;
+    height:110vh;
+}
+td {
+    border: 0.2vw rgba(0, 0, 0, 0.458) solid;
+    width:2%;
+    height:2.4%;
+}
+
+#play {
+    position:absolute;
+    top:40vh;
+    right:-46vw;
+    transform:rotateZ(90deg);
+}
+
+#shop {
+    position:absolute;
+    top:40vh;
+    left:-47vw;
+    transform:rotateZ(270deg);
+}
+
+@keyframes move3 {
+    0%  {transform:translateY(0vh) rotateZ(-0.8deg) scaleY(-1);}
+    25% {transform:translateY(-0.4vh) rotateZ(0.8deg) scaleY(-1);}
+    50% {transform:translateY(0vh) rotateZ(-0.8deg) scaleY(-1);}
+    75% {transform:translateY(0.4vh) rotateZ(0.8deg) scaleY(-1);}
+    100% {transform:translateY(0vh) rotateZ(-0.8deg) scaleY(-1);}
+}
+#relax p {
+    transform:scaleX(-1);
+    animation:move3 0.4s linear infinite 0.3s;
+}
+
+img {
+    opacity:0.8;
+    animation:move 0.8s linear infinite;
+}
+#star {
+    position:relative;
+    left:60vw;
+    scale:0.4;
+    animation-delay:0.3s;
+}
+#O {
+    position:relative;
+    left:2vw;
+    bottom:20vh;
+    scale:0.4;
+    animation-delay:0.2s;
+}
+#X {
+    position:relative;
+    right:56vw;
+    top:12vh;
+    scale:0.4;
+    animation-delay:0.6s;
+}
+
+@keyframes pageFromRight {
+    0%  {transform:translate(110vw, -105vh);}
+    90% {transform:translate(0vw, -105vh);}
+    100%{transform:translate(0vw, -105vh);}
+}
+@keyframes pageToLeft {
+    0%  {transform:translate(0vw, -100vh);}
+    100%{transform:translate(-110vw, -100vh);}
+}
+@keyframes pageFromLeft {
+    0%  {transform:translate(-110vw, -105vh);}
+    90% {transform:translate(0vw, -105vh);}
+    100%{transform:translate(0vw, -105vh);}
+}
+#paper {
+    position:absolute;
+    left:0vw;
+    top:100vh;
+    width:110vw;
+    height:110vh;
+    background-color:rgb(106, 106, 106);
+    z-index:10;
+}
+.fromRight {
+    animation:pageFromRight 1.2s ease-in 1;
+    top:-10vh;
+}
+.fromLeft {
+    animation:pageFromLeft 1.2s ease-in 1;
+    top:-10vh;
+}
+
+#wins {
+    position:absolute;
+    width:60vw;
+    bottom:20vh;
+    left:20vw;
+    display:flex;
+    justify-content:space-between;
+    padding:0vh 1vw;
+    border-radius:1vw;
+    background-color:rgba(174, 255, 52, 0.2);
+}
+
+#reset {
+    position:absolute;
+    left:40vw;
+    bottom:4vh;
+    max-width:20vw;
+    text-align:center;
+    border:black 0.2vw solid;
+    background-color:rgb(201, 201, 201);
+    cursor:pointer;
+    user-select:none;
+}
+#reset:hover {
+    background-color:white;
+}

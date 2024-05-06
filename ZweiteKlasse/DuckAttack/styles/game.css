@@ -1,0 +1,387 @@
+@font-face {
+    font-family: pixelart;
+    src: url(../assets/Daydream.ttf)
+}
+
+@keyframes daynightcycle {
+    0%  {background-color:rgb(105, 237, 255);}
+    40% {background-color:rgb(88, 234, 253);}
+    45% {background-color:rgb(67, 57, 255);}
+    50% {background-color:rgb(146, 57, 255)}
+    55% {background-color:rgb(255, 162, 31);}
+    60% {background-color:rgb(7, 17, 33);}
+    90% {background-color:rgb(2, 4, 8);}
+    95% {background-color:rgb(240, 160, 70)}
+}
+body {
+    width:100%;
+    overflow:hidden;
+    image-rendering:pixelated;
+    background-color: rgb(105, 237, 255);
+    font-family:pixelart;
+    animation:daynightcycle 48s ease infinite;
+}
+#background {
+    position:absolute;
+    margin:0px;
+    left:-1vw;
+    width:110vw;
+    height:100vh;
+    background: url(../assets/Forest.png);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+
+/*Choose fighters*/
+
+@keyframes title {
+    0%  {transform:translateX(0vw);scale:1;}
+    25% {transform:translateX(-1vw);scale:1.1;}
+    50% {transform:translateX(0vw);scale:1;}
+    75% {transform:translateX(1vw);scale:1.1;}
+}
+h1 {
+    color:rgb(242, 255, 190);
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+    text-align:center;
+    font-size:2vw;
+    animation:title 0.8s ease-in-out infinite;
+    user-select:none;
+}
+
+@keyframes land {
+    0%  {transform:translateY(-70vh);}
+    80% {transform:translateY(8vh);}
+    100%{transform:translateY(0vh);}
+}
+@keyframes hover {
+    25% {transform:translateY(-1vh);}
+    50% {transform:translateY(0vh);}
+    75% {transform:translateY(1vh);}
+}
+#choose {
+    display:grid;
+    width:100vw;
+    grid-template-columns: 50vw 50vw;
+    z-index:2;
+    position:relative;
+    animation:land 0.6s ease 1, hover 1.2s linear infinite 0.6s;
+}
+.choosebox {
+    border:white 0.4vw solid;
+    background-color:rgb(244, 204, 118);
+    width:70%;
+    color:white;
+}
+.choosebox h2 {
+    text-align:center;
+    font-size:1.6vw;
+}
+#choose1 {
+    grid-column:1;
+    margin:4%;
+    margin-right:auto;
+}
+#choose2 {
+    grid-column:2;
+    margin:4%;
+    margin-left:auto;
+}
+#choose2 img {
+    transform:scaleX(-1);
+}
+
+.choose {
+    min-width:30%;
+    margin:1vh auto;
+    background-color:rgba(0, 0, 0, 0);
+    user-select:none;
+}
+.choose:hover {
+    background-color:rgba(227, 227, 227, 0.4);
+}
+.choose img {
+    width:90%;
+    border:white 0.4vw solid;
+    margin:0vw;
+}
+.choose p {
+    margin:0vw;
+    border:white 0.4vw solid;
+    font-size:0.8vw;
+    width:80%;
+    padding:5%;
+}
+
+.secretCode {
+    max-width:50%;
+    font-size:1.2vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+input[type="text"] {
+    font-size:1.2vw;
+    font-family:pixelart;
+    max-width:90%;
+    background-color:rgb(208, 173, 97);
+    border:white solid;
+}
+input[type="text"]:focus {
+    outline:none;
+}
+
+.nameSelect {
+    width:44%;
+    margin-left:25%;
+    margin-right:25%;
+}
+input[type="text"].nameSelect {
+    margin-top:3%;
+    margin-bottom:1%;
+    font-size:1.4vw;
+    background-color:rgba(208, 173, 97, 0.4);
+    border-color:rgba(255, 255, 255, 0.2);
+}
+input[type="text"].nameSelect:focus {
+    background-color:rgb(208, 173, 97);
+    border-color:rgb(255, 255, 255);
+}
+
+.secretCode div.choose {
+    min-width:0%;
+    margin:1vh 0vw;
+    height:100%;
+    width:40%;
+    text-align:center;
+    border:white 0.3vw solid;
+}
+
+
+/*Actual fighting game*/
+
+#game {
+    position:absolute;
+    top:0;
+    left:0;
+    user-select:none;
+}
+
+@keyframes tie1 {
+    40% {transform:translateY(4vh) scaleX(-1);filter:grayscale(2);}
+}
+@keyframes tie2 {
+    40% {transform:translateY(4vh);filter:grayscale(2);}
+}
+
+@keyframes victory {
+    25% {transform:translateY(-2vh);}
+    50% {transform:translateY(0vh);}
+    75% {transform:translateY(2vh);filter:hue-rotate(360deg);}
+}
+
+@keyframes fall {
+    0%  {transform:translateY(-100vh);}
+    85% {transform:translateY(8vh);}
+    100%{transform:translateY(0vh);}
+}
+@keyframes attack1 {
+    40% {transform:translateX(40vw) scaleX(-1);}
+}
+@keyframes hurt1 {
+    20% {filter:hue-rotate(0deg) brightness(100%);}
+    30% {transform:translateX(0vw);}
+    50% {transform:translateX(-10vw);filter:hue-rotate(-50deg) brightness(180%)}
+    90% {filter:hue-rotate(0deg) brightness(100%);}
+}
+@keyframes lost1 {
+    40% {transform:translate(-6vw, -12vh);filter:hue-rotate(0deg) brightness(100%);}
+    50% {transform:translate(-7vw, -14vh);filter:hue-rotate(-50deg) brightness(180%);}
+    100%{transform:translate(-12vh, 80vh);}
+}
+#fighter1 {
+    position:absolute;
+    top:86vh;
+    left:2vw;
+    width:34vw;
+}
+#fighter1 img {
+    width:28vw;
+    transform:translateY(-100%);
+    transition: width 1s ease, transform 1s ease;
+}
+
+@keyframes fall2 {
+    0%  {transform:translateY(-100vh) scaleX(-1);}
+    85% {transform:translateY(4vh) scaleX(-1);}
+    100%{transform:translateY(0vh) scaleX(-1);}
+}
+@keyframes attack2 {
+    40% {transform:translateX(-40vw);}
+}
+@keyframes hurt2 {
+    20% {filter:hue-rotate(0deg) brightness(100%);}
+    30% {transform:translateX(0vw) scaleX(-1);}
+    50% {transform:translateX(10vw) scaleX(-1);filter:hue-rotate(-50deg) brightness(180%);}
+    90% {filter:hue-rotate(0deg) brightness(100%);}
+}
+@keyframes lost2 {
+    40% {transform:translate(6vw, -12vh) scaleX(-1);filter:hue-rotate(0deg) brightness(100%);}
+    50% {transform:translate(7vw, -14vh) scaleX(-1);filter:hue-rotate(-50deg) brightness(180%);}
+    100%{transform:translate(12vh, 80vh) scaleX(-1);}
+}
+#fighter2 {
+    position:absolute;
+    top:86vh;
+    left:64vw;
+    width:34vw;
+    transform:scaleX(-1);
+}
+#fighter2 img {
+    width:28vw;
+    transform:translateY(-100%);
+    transition: width 1s ease, transform 1s ease;
+}
+
+@keyframes hit {
+    12.5% {transform:translateY(-1vh);}
+    37.5% {transform:translateY(1vh);}
+    62.5% {transform:translateY(-1vh);}
+    87.5% {transform:translateY(1vh);}
+}
+@keyframes lose1 {
+    100%{transform:translateX(-50vw);}
+}
+#hp1 {
+    width:8vw;
+    position:absolute;
+    left:3vw;
+    top:4vh;
+    color:white;
+    font-size:2vw;
+}
+#hp1 img {
+    width:100%;
+}
+#hp1 p {
+    text-align:center;
+    transform:translate(80%, -312%);
+    width:3vw;
+}
+@keyframes lose2 {
+    100%{transform:translateX(50vw);}
+}
+#hp2 {
+    width:8vw;
+    position:absolute;
+    left:89vw;
+    top:4vh;
+    color:white;
+    font-size:2vw;
+}
+#hp2 img {
+    width:100%;
+}
+#hp2 p {
+    text-align:center;
+    transform:translate(80%, -312%);
+    width:3vw;
+}
+@keyframes disableRoll {
+    20% {transform:translateY(-70vh);}
+    80% {transform:translateY(-70vh);}
+}
+.name {
+    font-size:1.4vw;
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+}
+.name p {
+    display:inline;
+}
+#hp1 .name {
+    transform:translate(110%, -376%);
+}
+#hp2 .name {
+    direction:rtl;
+    transform:translate(-110%, -376%);
+}
+.button {
+    background-color:white;
+    border: black 0.4vw solid;
+    width:20vw;
+    font-size:2.4vw;
+    user-select:none;
+    padding:0.6vw;
+    text-align:center;
+    margin-left:39.4vw;
+    margin-right:39.4vw;
+    margin-top:10vh;
+    scale:1;
+    transition:scale 0.2s ease, box-shadow 0.4s ease;
+    box-shadow: 0.1vw 0.1vw rgba(0, 0, 0, 0.374);
+    z-index:3;
+}
+.button:hover {
+    scale:1.1;
+    box-shadow: 0.8vw 0.8vw 0.6vw rgba(0, 0, 0, 0.374);
+    cursor:pointer;
+}
+.button:active {
+    background-color:rgb(154, 154, 154);
+}
+button:disabled {
+    background-color:rgb(154, 154, 154);
+}
+
+#dice {
+    width:20vw;
+    margin-right:40vw;
+    margin-left:40vw;
+    display:flex;
+    justify-content:space-between;
+}
+@keyframes roll1 {
+    50% {transform:translateX(-80vw);}
+}
+@keyframes roll2 {
+    50% {transform:translateX(80vw);}
+}
+.dice {
+    width:7vw;
+    margin:2vw;
+}
+
+@keyframes fallGameOver {
+    0%  {transform:translateY(-100vh);}
+    90% {transform:translateY(6vh);}
+}
+#gameOver {
+    position:relative;
+    width:50vw;
+    margin-left:24vw;
+    margin-right:24vw;
+    background-color:rgb(244, 204, 118);
+    border:white 0.8vw solid;
+    border-radius:0.2vw;
+    padding:1vw;
+    text-align:center;
+    box-shadow:0.8vw 0.8vw 0.6vw rgba(0, 0, 0, 0.374);
+    margin-top:4vh;
+}
+h2 {
+    color:white;
+    font-size:2vw;
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+}
+h3 {
+    color:white;
+    font-size:1.6vw;
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+    user-select:all;
+}
+#gameOver .button {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:4vh;
+}

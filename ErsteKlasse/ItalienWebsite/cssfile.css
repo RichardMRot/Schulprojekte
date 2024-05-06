@@ -1,0 +1,221 @@
+html {
+	scroll-behavior:smooth;
+}
+
+body {
+	margin:0px;
+	font-family:Verdana;
+	color:#111;
+	background: linear-gradient(90deg, rgba(69,230,37,1) 0%, rgba(67,148,50,1) 12%,
+ rgba(222,219,211,1) 40%, rgba(222,219,211,1) 60%, rgba(148,77,72,1) 88%,
+ rgba(224,37,23,1) 100%);
+}
+
+nav {
+	overflow:hidden;
+	background-color:#fdfdfd;
+	display:flex;
+	justify-content:flex-end;
+	flex-flow:row nowrap;
+	z-index:5;
+}
+nav a, nav div {
+	transition: border-bottom-color 1s ease 0s, color 1s ease 0s,
+	background-color 1s ease 0s;
+	color:#7b7b7b;
+	text-align:center;
+	padding:3.4vh 2vw;
+	margin:0.5vh 0px;
+	text-decoration:none;
+	font-size:2.5vh;
+	border-bottom:#fdfdfd 2px solid;
+}
+nav a:hover, nav div:hover {
+	color:#1a1a1d;
+	border-bottom:#1a1a1d 2px solid;
+}
+nav a#active {
+	background-color:#efefef;
+	padding:3.4vh 2vw;
+	margin:0px;
+	border-bottom:#efefef 2px solid;
+}
+
+#pageNav {
+	width:95%;
+	display:flex;
+	background-color:#dedbd3;
+	float:left;
+	margin-bottom:4rem;
+	justify-content:flex-start;
+	padding-left:3%;
+}
+#pageNav a {
+	text-decoration:underline;
+	color:#7b7b7b;
+	font-size:1.5vh;
+	float:left;
+	border-bottom-style:none;
+}
+
+#logo {
+	margin-right:auto;
+	justify-self:flex-end;
+	padding:4vh 5.4vw;
+	margin-top:0px;
+	margin-bottom:0px;
+	border-bottom:#fdfdfd 0px solid;
+}
+#logo:hover {
+	background-color:#efefef;
+	padding:4vh 5.4vw;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:auto;
+	border-bottom:#efefef 0px solid;
+}
+
+/*https://www.w3schools.com/css/css_dropdowns.asp*/
+.dropdown {
+	float: right;
+	overflow: hidden;
+	padding:0px;
+}
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	color:#7b7b7b;
+	padding:3vh 1vw;
+	position:relative;
+	top:2.6vh;
+	background-color: inherit;
+	font-family: inherit;
+}
+.dropdown:hover .dropbtn {
+	color:#1a1a1d;
+	border-bottom:#efefef 2px solid;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	padding:1.2vh 0.4vw;
+	background-color: #f9f9f9;
+	z-index: 1;
+}
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding:0px;
+	margin:0px;
+	text-decoration: none;
+	text-align: left;
+}
+.dropdown-content a:active {
+	background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#slideshow img {
+	width: 100%;
+	position: relative;
+	opacity: 0;
+}
+@keyframes slideshow {
+	0%	{background-image: url(Bilder/amalfi.jpg);}
+	33% {background-image: url(Bilder/camogli.jpg);}
+	66%	{background-image: url(Bilder/vietri_sul_mare.jpg);}
+}
+#slideshow {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: auto;
+	background-image: url(Bilder/amalfi.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	animation: slideshow 10s ease 0s infinite;
+}
+
+#mainPart {
+	width:85%;
+	margin-right:auto;
+	margin-left:auto;
+	background-color:#dedbd3;
+	padding-bottom:1%;
+	margin-bottom:5%;
+	border: #fdfdfd 4px solid;
+}
+
+.imageAndText {
+	display:flex;
+	flex-wrap:wrap;
+}
+.infoText {
+	margin:2% 5%;
+}
+.infoText h1 {
+	font-size:7vh;
+	font-weight:bold;
+}
+.infoText h2 {
+	font-size: 4.5vh;
+	text-decoration:underline;
+}
+.infoText p {
+	font-size:2.5vh;
+}
+.infoText img {
+	width:30%;
+	height:50%;
+	margin-top:5%;
+	margin-left:auto;
+	border: 4px solid white;
+	transition: scale 0.5s ease 0s;
+}
+.infoText img:hover {
+	scale:1.2;
+}
+
+.infoLeft {
+	margin-right:10%;
+	width:40%;
+}
+.infoLeft img {
+	display:block;
+}
+/*https://www.w3schools.com/howto/howto_css_list_without_bullets.asp*/
+.infoText ul {
+	font-size:2.5vh;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.infoText li {
+	transition:color 0.2s ease 0s;
+	color:#111;
+}
+.infoText li:hover {
+	color:#777;
+}
+.infoRight {
+	margin-left:10%;
+	width:40%;
+	float:right;
+}
+
+footer {
+	text-align:center;
+}
+footer hr {
+	border-top: #fdfdfd 2px solid;
+}
+
+span {
+	transition:color 0.2s ease 0s;
+	color:#111;
+}
+span:hover {
+	color:#777;
+}

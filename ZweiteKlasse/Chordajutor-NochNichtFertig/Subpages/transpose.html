@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chordajutor</title>
+    <link rel="stylesheet" href="../Styles/default.css">
+    <link rel="stylesheet" href="../Styles/transpose.css">
+    <script src="../Scripts/default.js" defer></script>
+    <script src="../Scripts/transpose.js" defer></script>
+</head>
+<body>
+
+    <main>
+
+        <h1>Transpose</h1>
+    
+        <nav>
+            <div onclick="window.location.href='../index.html'" id="homepage">Homepage</div>
+            <div onclick="window.location.href='findchord.html'">Find Chord</div>
+            <div onclick="window.location.href='circleoffifths.html'">Circle of Fifths</div>
+            <div onclick="window.location.href='findscale.html'">Find Scale</div>
+        </nav>
+        
+        <div id="text_middle">
+
+            <div>
+
+                <h2>Transpose from: <select name="from" id="transpose_from">
+                </select></h2>
+                <textarea  id="textarea_from" placeholder="e.g. A     Em     G7&#10    D      F#m      A"></textarea>
+
+                <h3>Steps: 
+                    <input type="number" min="-11" max="11" value="0" id="steps">
+                </h3>
+
+                <h2>Result:  <select name="from" id="transpose_to">
+                </select></h2>
+                <textarea id="textarea_to" placeholder="Transposed result" readonly></textarea>
+
+                <div id="transpose_button" onclick="transpose()">Transpose</div>
+
+            </div>
+
+            <div>
+
+                <h2>How to use this?</h2>
+
+                <p>
+                    You put the (text with) chords that you want transposed 
+                    in the upper box. We will try to automatically find the 
+                    scale that it is in, but if it is wrong you can set it to 
+                    the correct scale with the box in the top-right.<br><br>
+                    Next you can either set by how many steps the chords should 
+                    be transposed or into which scale it should be transposed.<br><br>
+                    Lastly, click the "Transpose" button in the bottom and it will 
+                    be transposed!<br><br>
+                    If your input contains text, make sure to have the text-lines be
+                    separated from the chord-lines, otherwise the result may yield 
+                    wrong results!
+                </p>
+            
+            </div>
+
+        </div>
+    
+        <footer>
+            <p>Richard</p>
+            <p>Found bugs? Send a mail to <a href="mailto:#">name@mail.com</a></p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

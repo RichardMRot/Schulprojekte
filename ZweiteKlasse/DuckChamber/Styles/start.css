@@ -1,0 +1,85 @@
+@font-face {
+    font-family:pixel;
+    src:url(../ArtAssets/DayDream.ttf);
+}
+
+body {
+    width:100vw;
+    height:100vh;
+    background:black;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    color:white;
+    font-family:pixel;
+    text-align:center;
+}
+
+
+@keyframes hover {
+    0%  {transform:translateY(0vh);}
+    50% {transform:translateY(4vh);}
+    100%{transform:translateY(0vh);}
+}
+
+h1 {
+    font-size:1.4rem;
+    margin-bottom:0px;
+    color:rgb(135, 135, 135);
+    animation:hover 0.8s ease infinite;
+}
+
+h2 {
+    font-size:3rem;
+    margin-top:0px;
+    animation:hover 0.8s ease infinite;
+}
+
+
+@keyframes hoverButton {
+    0%  {transform:translateY(0vh);}
+    25% {transform:translateY(-4vh);}
+    50%{transform:translateY(0vh);}
+}
+
+div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:20vw;
+    height:8vh;
+    font-size:2.2rem;
+    background-color:gray;
+    border:0.3vw rgb(255, 255, 255) solid;
+    border-radius:0.4vw;
+    cursor:pointer;
+    user-select:none;
+    margin:40vh auto;
+    margin-bottom:0vh;
+    animation:hoverButton 2s ease infinite;
+}
+div:hover {
+    background-color:rgb(200, 200, 200);
+}
+
+img {
+    position:absolute;
+    top:40vh;
+    scale:8;
+    image-rendering:pixelated;
+    user-select:none;
+}
+#left {
+    left:10vw;
+}
+#right {
+    right:10vw;
+    transform:scaleX(-1);
+}
+
+a {
+    position:absolute;
+    color:rgb(47, 47, 124);
+    bottom:2vh;
+    right:1.4vw;
+    font-size:0.6rem;
+}

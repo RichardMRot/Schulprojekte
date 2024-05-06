@@ -1,0 +1,205 @@
+@font-face {
+    font-family: pixelart;
+    src: url(../assets/Daydream.ttf);
+}
+
+body {
+    font-family:pixelart;
+    background:url(../assets/menu.png);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    image-rendering:pixelated;
+    overflow:hidden;
+}
+#ducks {
+    position:absolute;
+}
+@keyframes duck1 {
+    25% {transform:rotateZ(-10deg)}
+    75% {transform:rotateZ(10deg)}
+}
+#duck1 {
+    position:absolute;
+    left:3vw;
+    top:56vh;
+    width:36vw;
+    animation: duck1 3s ease-in-out infinite alternate;
+}
+@keyframes duck2 {
+    0%  {transform:rotateZ(0deg)}
+    25% {transform:rotateZ(6deg)}
+    75% {transform:rotateZ(-6deg)}
+}
+#duck2 {
+    position:absolute;
+    left:72vw;
+    top:32vh;
+    width:18vw;
+    animation: duck2 3s ease infinite 1s alternate;
+}
+
+@keyframes flying_dice {
+    0%  {transform:translateX(-50vw) translateY(-50vh) scaleX(-1) rotateZ(30deg);}
+    100%{transform:translateX(120vw) translateY(100vh) scaleX(-1) rotateZ(30deg);}
+}
+#falling_dice {
+    position:absolute;
+    background-image:url(../assets/FallingDice.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    min-width:14vw;
+    min-height:100%;
+    left:10vw;
+    top:12vh;
+    transform:scaleX(-1) rotateZ(30deg);
+    animation:flying_dice 8s ease infinite;
+}
+@keyframes dice1 {
+    0%  {opacity:1;}
+    50% {opacity:0;}
+}
+#falling_dice #img1 {
+    position:absolute;
+    opacity:0;
+    min-width:14vw;
+    animation:dice1 0.5s linear infinite;
+    animation-timing-function:steps(1, end);
+}
+@keyframes dice2 {
+    0%  {opacity:0;}
+    50% {opacity:1;}
+}
+#falling_dice #img2 {
+    position:absolute;
+    opacity:0;
+    min-width:14vw;
+    animation:dice2 0.5s linear infinite;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes hover_title {
+    0%  {transform: translateY(0);scale:1.1;}
+    25% {scale:1;}
+    50% {transform: translateY(6vh);scale:1.1;}
+    75% {scale:1;}
+}
+
+h1 {
+    margin-left:auto;
+    margin-right:auto;
+    color:rgb(242, 255, 190);
+    font-size:5vw;
+    text-align:center;
+    animation: hover_title 1.6s ease-in-out infinite;
+    scale:1.1;
+    user-select:none;
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+    z-index:3;
+}
+
+.button {
+    background-color:white;
+    border: black 0.4vw solid;
+    width:20vw;
+    font-size:2.4vw;
+    user-select:none;
+    padding:0.6vw;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10vh;
+    scale:1;
+    transition:scale 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0.1vw 0.1vw rgba(0, 0, 0, 0.374);
+    z-index:3;
+}
+.button:hover {
+    scale:1.1;
+    box-shadow: 0.8vw 0.8vw 0.6vw rgba(0, 0, 0, 0.374);
+    cursor:pointer;
+}
+.button:active {
+    background-color:rgb(154, 154, 154);
+}
+.button a {
+    width:100%;
+    height:100%;
+}
+
+#game {
+    margin-top:16vh;
+}
+#helpButton {
+    font-size:2.4vw;
+    text-align:center;
+    user-select:none;
+    background-color:rgb(244, 204, 118);
+    border:white 0.3vw solid;
+    border-bottom-style:none;
+    border-radius:0.2vw;
+    padding:2vw;
+    margin-bottom:2vh;
+    width:12vw;
+    margin-left:auto;
+    margin-right:auto;
+    z-index:3;
+}
+
+#helpMenu {
+    margin-top:-2vw;
+    background-color:rgb(244, 204, 118);
+    border:white 0.3vw solid;
+    border-radius:0.2vw;
+    padding:1vw;
+    height:80vh;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+@keyframes help {
+    0%  {transform: translateY(0vh);}
+    50% {transform: translateY(2vh);}
+}
+#help {
+    z-index:10;
+    position:absolute;
+    width:60vw;
+    left:20vw;
+    top:88vh;
+    transition: top 0.4s ease;
+    animation: help 1.2s ease-in-out infinite;
+}
+#help:hover {
+    top:12vh;
+}
+#help h3 {
+    font-size:1.4vw;
+}
+#help h4 {
+    font-size:1vw;
+}
+#help img {
+    width:80%;
+}
+#imgs {
+    padding:5% 10%;
+}
+#imgs img {
+    width:100%;
+}
+
+@keyframes rotate {
+    25% {transform:rotateZ(-23deg)}
+    75% {transform:rotateZ(-17deg)}
+}
+h2 {
+    position:absolute;
+    text-align:center;
+    left:62vw;
+    top:20vh;
+    transform:rotateZ(-20deg);
+    color:white;
+    font-size:0.8vw;
+    text-shadow:0.1vw 0.1vw 0.4vw rgba(0, 0, 0, 0.7);
+    animation:rotate 0.8s linear infinite;
+}

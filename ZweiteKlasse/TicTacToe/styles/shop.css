@@ -1,0 +1,123 @@
+@font-face {
+    font-family:Scribble;
+    src:url(../assets/Tealand.ttf);
+}
+
+body {
+    overflow:hidden;
+    font-family:Scribble;
+    text-align:center;
+}
+
+img {
+    user-select:none;
+}
+
+
+@keyframes move {
+    0%  {transform:translateY(0vh) rotateZ(-0.8deg);}
+    25% {transform:translateY(-0.4vh) rotateZ(0.8deg);}
+    50% {transform:translateY(0vh) rotateZ(-0.8deg);}
+    75% {transform:translateY(0.4vh) rotateZ(0.8deg);}
+    100%{transform:translateY(0vh) rotateZ(-0.8deg);}
+}
+h1 {
+    position:relative;
+    bottom:4vh;
+    font-size:6vw;
+    text-align:center;
+    animation:move 0.4s linear infinite;
+    user-select:none;
+}
+
+
+@keyframes moveSlow {
+    0%  {transform:translateY(0vh) rotateZ(-0.4deg);}
+    25% {transform:translateY(-0.2vh) rotateZ(0.4deg);}
+    50% {transform:translateY(0vh) rotateZ(-0.4deg);}
+    75% {transform:translateY(0.2vh) rotateZ(0.4deg);}
+    100% {transform:translateY(0vh) rotateZ(-0.4deg);}
+}
+#money {
+    position:absolute;
+    top:4vh;
+    margin-left:8vw;
+    width:86vw;
+    display:flex;
+    justify-content:space-between;
+}
+#money h2 {
+    animation:moveSlow 0.6s linear infinite 0.312s;
+}
+
+
+#shop {
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content:space-evenly;
+}
+#shop div {
+    position:relative;
+    padding:auto;
+}
+
+.buy {
+    width:80%;
+    margin:auto;
+    background-color:rgba(114, 114, 114, 0.216);
+    cursor:pointer;
+}
+.buy:hover {
+    background-color:rgba(222, 222, 222, 0.677);
+}
+.buy img {
+    margin-top:0.4vh;
+    width:40%;
+}
+.buy input {
+    margin-top:0.4vh;
+}
+
+
+#gridBackground table {
+    position:absolute;
+    left:-0.6vw;
+    top:-1vh;
+    opacity:0.3;
+    border: 0.2vw rgba(0, 0, 0, 0.458) solid;
+    border-collapse: collapse;
+    width:110vw;
+    height:110vh;
+}
+#gridBackground td {
+    border: 0.2vw rgba(0, 0, 0, 0.458) solid;
+    width:2%;
+    height:2.4%;
+}
+
+
+#back {
+    position:absolute;
+    left:1vw;
+    top:0;
+    width:5%;
+    animation:move 0.4s linear infinite;
+}
+@keyframes pageToRight {
+    0%  {transform:translateX(-110vw);}
+    100%{transform:translateX(0vw);}
+}
+@keyframes pageFromLeft {
+    0%  {transform:translateX(0vw);}
+    90% {transform:translateX(-110vw);}
+    100%{transform:translateX(-110vw);}
+}
+#paper {
+    position:absolute;
+    left:100vw;
+    top:0vh;
+    width:200vw;
+    height:100vh;
+    background-color:rgb(106, 106, 106);
+    z-index:10;
+}

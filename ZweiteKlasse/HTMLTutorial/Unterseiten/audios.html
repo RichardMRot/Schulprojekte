@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Audios</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="home"><a href="../start.html"><img src="../Sonstiges/home.png" alt="home"></a></div>
+		
+		<div style="display:flex;">
+			<div id="text">
+				<h1>Audios</h1>
+			
+				<div class="textleft">
+					<p>Audios kann man in HTML leicht hinzufügen. Dafür gibt es den
+						<span>&lt;audio&gt;</span> Element.<br> Darin muss man <span>&lt;source&gt;</span> Elemente geben, 
+						welche die Attribute <span>src="[Pfad]"</span> und <span>type="audio/[Dateityp]"</span> benötigen.
+						Der Browser schaut sich die erste &lt;source&gt; an und wenn die nicht geht, 
+						schaut der Browser, ob die nächste geht.
+						<br>Damit das Audio überhaupt geht, solltest du aber im &lt;audio&gt; entweder
+						den Attribut <span>autoplay</span> oder <span>controls</span> hinzufügen.
+						<br>Versuche das doch gleich hier, schreibe den Code in der Box dort rechts.
+						<br>Dateipfad für Audio ist '../Sonstiges/CoolerSong.mp3'
+					</p>
+					<audio controls>
+						<source src="../Sonstiges/CoolerSong.mp3" type="audio/mp3">
+						Dein Browser unterstützt dieses Audioformat nicht.
+					</audio>
+				</div>
+			</div>
+			<div style="max-width:35%;">
+				<textarea style="width:30vw;height:40vh;" id="code" placeholder="/* Dateipfad für Audio ist '../Sonstiges/CoolerSong.mp3' */"></textarea>
+				<div id="button" onclick="updateCode()">Try</div>
+				<div id="showcase"><p style="color:white;">[Dein Code wird hier angezeigt werden]</p></div>
+			</div>
+		</div>
+
+	</body>
+</html>

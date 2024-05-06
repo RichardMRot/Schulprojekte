@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Attack!</title>
+    <link rel="stylesheet" href="styles/start.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <script defer>
+        let current = 0
+        let musicFirstTime = true
+        function link () {
+            document.getElementById('sfx').play()
+            setTimeout(() => {
+            window.location.href='subpages/game.html'
+            }, 200);
+        }
+        function music(i, outside) {
+            if (musicFirstTime || outside == false) {
+                current = i
+                document.getElementsByClassName('music')[i].play()
+                setTimeout(() => {
+                    if (i == 0) music(1, false)
+                    else music(0, false)
+                }, 5710);
+                musicFirstTime = false;
+            }
+        }
+    </script>
+</head>
+<body onclick="music(0, true)">
+    <div style="width:100vw; height:100vh;position:absolute;"></div>
+
+    <div id="ducks">
+        <img id="duck1" src="assets/enteschrei.png" alt="A duck screaming">
+        <img id="duck2" src="assets/entefeind.png" alt="A duck further away">
+        <div id="falling_dice"><img src="assets/FallingDice.png" alt="A falling dice" id="img1">
+            <img src="assets/FallingDice2.png" alt="A falling dice" id="img2">
+        </div>
+    </div>
+
+    <h1>Duck Attack!</h1>
+    <h2>Click the screen to play music!</h2>
+    <div class="button" id="game" onclick="link()">Play Game</div>
+    <div id="help">
+        <div id="helpButton">Help</div>
+        <div id="helpMenu">
+            <div id="text">
+                <h3>How to play: </h3>
+                <h4>>Press "Play Game"</h4>
+                <h4>>Choose character</h4>
+                <h4>>Click "Roll" to start combat</h4>
+                <h4>>There are also secret codes that you can find at the end of a round</h4>
+                <h4>>Get them for secret characters</h4>
+                <img src="assets/tutorial3.JPG" alt="Secrets">
+            </div>
+            <div id="imgs">
+                <img src="assets/tutorial1.JPG" alt="Choose">
+                <img src="assets/tutorial2.JPG" alt="Roll">
+            </div>
+        </div>
+    </div>
+    <audio class="music" src="assets/maintheme.wav"></audio>
+    <audio class="music" src="assets/maintheme.wav"></audio>
+
+    <audio id="sfx" src="assets/click.wav"></audio>
+
+
+</body>
+</html>
