@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chordajutor</title>
+    <link rel="stylesheet" href="../Styles/default.css">
+    <link rel="stylesheet" href="../Styles/stripeoffifths.css">
+    <script src="../Scripts/default.js" defer></script>
+    <script src="../Scripts/stripeoffifths.js" defer></script>
+</head>
+<body>
+
+    
+    <img class="shapes" src="../Assets/EighthNote.png" alt="EighthNote">
+    <img class="shapes" src="../Assets/SixteenthNotes.png" alt="SixteenthNote">
+    <img class="shapes" src="../Assets/TrebleClef.png" alt="TrebleClef">
+    <img class="shapes" src="../Assets/QuarterRest.png" alt="QuarterRest">
+
+    
+    <main>
+
+        <h1>Stripe of Fifths</h1>
+    
+        <nav>
+            <div onclick="window.location.href='transpose.html'">Transpose</div>
+            <div onclick="window.location.href='findchord.html'">Find Chord</div>
+            <div onclick="window.location.href='../index.html'" id="homepage">Homepage</div>
+            <div onclick="window.location.href='findscale.html'">Find Scale</div>
+        </nav>
+        
+        <div id="text_middle">
+            <div>
+                
+                <h3>Choose scale:</h3>
+
+                <div id="strips_of_fifths">    
+                    <table id="left_stripe">
+                    </table>
+
+                    <div id="show_scale">
+                    </div>
+
+                    <table id="right_stripe">
+                    </table>
+                </div>
+
+                <div id="scale_chords">
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h2>How to use this?</h2>
+
+                <p>
+                    The Stripe of Fifths is like the Circle of Fifths, except, 
+                    well, it is in the form of two Stripes. The left stripe adds 
+                    a flat note every scale and the right stripe adds a sharp 
+                    note every scale. The outer scales are major, the 
+                    inner ones are minor.<br><br>
+                    Click on one of the letters (scales) and the chords that belong 
+                    to it will get shown.
+                </p>
+            
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

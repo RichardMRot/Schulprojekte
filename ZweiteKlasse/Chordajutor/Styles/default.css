@@ -1,5 +1,8 @@
-:root {
-
+@keyframes change_background {
+    0%  {background-color:rgb(147, 143, 143);}
+    25% {background-color:rgb(246, 207, 207);}
+    50% {background-color:rgb(159, 227, 222);}
+    75% {background-color:rgb(221, 244, 199);}
 }
 
 body {
@@ -7,18 +10,47 @@ body {
     font-family:Helvetica;
     margin:0px;
     padding:0px;
-    background-color:rgb(227, 223, 223);
+    background-color:rgb(147, 143, 143);
+    animation:change_background 16s ease infinite;
+}
+
+@keyframes move_right {
+    0%  {transform:translateX(-10vw);}
+    30% {transform:translateX(2vw);}
+    70% {transform:translateX(88vw);}
+    100%{transform:translateX(110vw);}
+}
+@keyframes move_left {
+    0%  {transform:translateX(110vw);}
+    30% {transform:translateX(88vw);}
+    70% {transform:translateX(2vw);}
+    100%{transform:translateX(-14vw);}
+}
+.shapes {
+    position:absolute;
+    animation:move_right 8s ease infinite;
+    width:10vw;
+    top:10vh;
+    transform:translateX(-20vw);
+    z-index:1;
+}
+.shapes:nth-child(even) {
+    animation-name:move_left;
+}
+.shapes:nth-child(3), .shapes:nth-child(4) {
+    top:60vh;
 }
 
 main {
     width: 68vw;
-    heibght:100vh;
     margin-left:auto;
     margin-right:auto;
     border-left:black 0.2vw solid;
     border-right:black 0.2vw solid;
     padding:2vw;
     background-color:rgb(244, 244, 244);
+    position:relative;
+    z-index:2;
 }
 
 h1 {
@@ -90,4 +122,17 @@ footer {
 
 footer a {
     color:rgb(56, 56, 56);
+}
+
+
+@media (max-width:840px) {
+    .shapes {
+        animation:none;
+    }
+    main {
+        width:100%;
+    }
+    nav div {
+        font-size:1.2em;
+    }
 }

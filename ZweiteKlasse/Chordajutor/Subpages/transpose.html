@@ -11,6 +11,13 @@
 </head>
 <body>
 
+    
+    <img class="shapes" src="../Assets/EighthNote.png" alt="EighthNote">
+    <img class="shapes" src="../Assets/SixteenthNotes.png" alt="SixteenthNote">
+    <img class="shapes" src="../Assets/TrebleClef.png" alt="TrebleClef">
+    <img class="shapes" src="../Assets/QuarterRest.png" alt="QuarterRest">
+
+    
     <main>
 
         <h1>Transpose</h1>
@@ -18,7 +25,7 @@
         <nav>
             <div onclick="window.location.href='../index.html'" id="homepage">Homepage</div>
             <div onclick="window.location.href='findchord.html'">Find Chord</div>
-            <div onclick="window.location.href='circleoffifths.html'">Circle of Fifths</div>
+            <div onclick="window.location.href='stripeoffifths.html'">Stripe of Fifths</div>
             <div onclick="window.location.href='findscale.html'">Find Scale</div>
         </nav>
         
@@ -26,19 +33,20 @@
 
             <div>
 
-                <h2>Transpose from: <select name="from" id="transpose_from">
-                </select></h2>
+                <h2>Transpose from: </h2>
                 <textarea  id="textarea_from" placeholder="e.g. A     Em     G7&#10    D      F#m      A"></textarea>
 
                 <h3>Steps: 
                     <input type="number" min="-11" max="11" value="0" id="steps">
                 </h3>
 
-                <h2>Result:  <select name="from" id="transpose_to">
-                </select></h2>
+                <h2>Result: </h2>
                 <textarea id="textarea_to" placeholder="Transposed result" readonly></textarea>
 
-                <div id="transpose_button" onclick="transpose()">Transpose</div>
+                <div id="buttons">
+                    <div id="transpose_button" onclick="transpose()">Transpose</div>
+                    <div id="enharmonic_button" onclick="enharmonic_change()">Enharmonic change (#)</div>
+                </div>
 
             </div>
 
@@ -48,16 +56,16 @@
 
                 <p>
                     You put the (text with) chords that you want transposed 
-                    in the upper box. We will try to automatically find the 
-                    scale that it is in, but if it is wrong you can set it to 
-                    the correct scale with the box in the top-right.<br><br>
-                    Next you can either set by how many steps the chords should 
-                    be transposed or into which scale it should be transposed.<br><br>
-                    Lastly, click the "Transpose" button in the bottom and it will 
-                    be transposed!<br><br>
+                    in the upper box. Next you can set by how many steps 
+                    the chords should be transposed. Lastly, click the "Transpose" 
+                    button in the bottom and it will be transposed!<br><br>
                     If your input contains text, make sure to have the text-lines be
                     separated from the chord-lines, otherwise the result may yield 
-                    wrong results!
+                    wrong results!<br><br>
+                    Also, if the result contains, for example flats (b), but you 
+                    want sharps (#), just use the 'Enharmonic Change' button. 
+                    It also says to which types of notes it is currently toggled 
+                    to in the parantheses.
                 </p>
             
             </div>
@@ -65,8 +73,8 @@
         </div>
     
         <footer>
-            <p>Richard</p>
-            <p>Found bugs? Send a mail to <a href="mailto:#">name@mail.com</a></p>
+            <p>Richard-M. R.</p>
+            <p>Found bugs? Send a mail to <a href="mailto:r.rotariu@htblaleonding.onmicrosoft.com">r.rotariu@htblaleonding.onmicrosoft.com</a></p>
         </footer>
 
     </main>

@@ -1,0 +1,64 @@
+body {
+    overflow-y:visible;
+}
+
+#text_middle {
+    display:grid;
+    grid-template-columns: 58% 38%;
+    justify-content:space-between;
+    margin-bottom:2vh;
+    min-height:70vh;
+}
+
+textarea {
+    width:80%;
+    resize:vertical;
+    height:24vh;
+    min-height:12vh;
+    max-height:40vh;
+}
+
+h3 {
+    text-align:right;
+    margin-bottom:0px;
+}
+
+h2 {
+    margin-top:0.8vh;
+}
+
+#find_button {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:8vw;
+    padding:0.2vw;
+    font-size:1.2em;
+    border:black 0.1vw solid;
+    background-color:rgb(234, 234, 234);
+    cursor:pointer;
+    user-select:none;
+    margin-top:2vh;
+}
+#find_button:hover {
+    background-color:white;
+}
+#find_button:active {
+    background-color:rgb(176, 176, 176);
+}
+
+
+#found_scale {
+    margin-top:4vh;
+    font-size:2em;
+}
+
+@media (max-width:840px) {
+    #text_middle {
+        display:grid;
+        grid-template-columns:100%;
+    }
+    #find_button {
+        width:24vw;
+    }
+}

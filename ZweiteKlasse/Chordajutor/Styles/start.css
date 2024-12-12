@@ -1,0 +1,12 @@
+main {
+    border-bottom:black 0.2vw solid;
+    border-radius:0.2vw;
+}
+
+
+#text_middle {
+    min-height:20vh;
+}
+#text_middle p {
+    font-size:1em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chordajutor</title>
+    <link rel="stylesheet" href="../Styles/default.css">
+    <link rel="stylesheet" href="../Styles/findscale.css">
+    <script src="../Scripts/default.js" defer></script>
+    <script src="../Scripts/findscale.js" defer></script>
+</head>
+<body>
+
+    
+    <img class="shapes" src="../Assets/EighthNote.png" alt="EighthNote">
+    <img class="shapes" src="../Assets/SixteenthNotes.png" alt="SixteenthNote">
+    <img class="shapes" src="../Assets/TrebleClef.png" alt="TrebleClef">
+    <img class="shapes" src="../Assets/QuarterRest.png" alt="QuarterRest">
+
+
+    <main>
+
+        <h1>Find Scale</h1>
+    
+        <nav>
+            <div onclick="window.location.href='transpose.html'">Transpose</div>
+            <div onclick="window.location.href='findchord.html'">Find Chord</div>
+            <div onclick="window.location.href='stripeoffifths.html'">Stripe of Fifths</div>
+            <div onclick="window.location.href='../index.html'" id="homepage">Homepage</div>
+        </nav>
+        
+        <div id="text_middle">
+            <div>
+
+                <h2>Input-text: </h2>
+                <textarea  id="textarea_from" placeholder="e.g. A     Em     G7&#10    D      F#m      A"></textarea>
+
+                <div id="find_button" onclick="find_scale()">Find Scale</div>
+
+                <div id="found_scale"></div>
+
+            </div>
+
+            <div>
+
+                <h2>How to use this?</h2>
+
+                <p>
+                    You put the (text with) chords in the upper box and then
+                    click the "Find Scale" button, which will then find the 
+                    scale. Make sure that, if your text contains lyrics, 
+                    the chords and the lyrics are separated into different lines. 
+                    Also, if you have more than one scale (not necessarily 
+                    counting borrowed chords) it might not work, though.
+                </p>
+            
+            </div>
+        </div>
+    
+        <footer>
+            <p>Richard-M. R.</p>
+            <p>Found bugs? Send a mail to <a href="mailto:r.rotariu@htblaleonding.onmicrosoft.com">r.rotariu@htblaleonding.onmicrosoft.com</a></p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chordajutor</title>
+
+    <script src="http://unpkg.com/tone"></script>
+
+    <link rel="stylesheet" href="../Styles/default.css">
+    <link rel="stylesheet" href="../Styles/findchord.css">
+    <script src="../Scripts/default.js" defer></script>
+    <script src="../Scripts/findchord.js" defer></script>
+</head>
+<body>
+
+    
+    <img class="shapes" src="../Assets/EighthNote.png" alt="EighthNote">
+    <img class="shapes" src="../Assets/SixteenthNotes.png" alt="SixteenthNote">
+    <img class="shapes" src="../Assets/TrebleClef.png" alt="TrebleClef">
+    <img class="shapes" src="../Assets/QuarterRest.png" alt="QuarterRest">
+
+    
+    <main>
+
+        <h1>Find Chord</h1>
+    
+        <nav>
+            <div onclick="window.location.href='transpose.html'">Transpose</div>
+            <div onclick="window.location.href='../index.html'" id="homepage">Homepage</div>
+            <div onclick="window.location.href='stripeoffifths.html'">Stripe of Fifths</div>
+            <div onclick="window.location.href='findscale.html'">Find Scale</div>
+        </nav>
+        
+        <div id="text_middle">
+            <div>
+
+                <h2>Wanted Chord:</h2>
+                <input type="text" placeholder="Chord">
+                <div id="find_button" onclick="find_chord()">Find Chord</div>
+                
+                <div id="keyboard">
+                    <svg id="board">
+                        <rect width="100%" height="100%" fill="#2E2E2E" stroke="gray" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div id="listen_button" onclick="play_chord()">Listen</div>
+            </div>
+
+            <div>
+
+                <h2>How to use this?</h2>
+
+                <p>
+                    Did you find a chord that you don't know how to play? 
+                    Maybe you don't understand a symbol or it's just complicated 
+                    to find out what it's supposed to be like. <br><br>
+                    Anyways, just put it in that input-field there and then 
+                    press the button down below. Then you'll see the notes you 
+                    need for it on a piano keyboard. You can also hear what 
+                    it sounds like.<br><br>
+                </p>
+            
+            </div>
+        </div>
+        
+
+        <footer>
+            <p>Richard-M. R.</p>
+            <p>Found bugs? Send a mail to <a href="mailto:r.rotariu@htblaleonding.onmicrosoft.com">r.rotariu@htblaleonding.onmicrosoft.com</a></p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

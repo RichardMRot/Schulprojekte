@@ -31,7 +31,14 @@ h2 select {
     float:right;
 }
 
-#transpose_button {
+
+#buttons {
+    display:flex;
+    flex-wrap:flex;
+    justify-content:space-between;
+}
+
+#transpose_button, #enharmonic_button {
     display:flex;
     justify-content:center;
     align-items:center;
@@ -44,11 +51,15 @@ h2 select {
     user-select:none;
     margin-top:2vh;
 }
-#transpose_button:hover {
+#transpose_button:hover, #enharmonic_button:hover {
     background-color:white;
 }
-#transpose_button:active {
+#transpose_button:active, #enharmonic_button:active {
     background-color:rgb(176, 176, 176);
+}
+
+#enharmonic_button {
+    width:14vw;
 }
 
 
@@ -69,4 +80,26 @@ input[type="number"] {
     text-align:center;
     border-radius:0.2vw;
     border-width:0.1vw;
+}
+
+
+@media (max-width:840px) {
+    #text_middle {
+        display:grid;
+        grid-template-columns:100%;
+    }
+    #transpose_button {
+        width:24vw;
+        margin-bottom:7vh;
+    }
+    #enharmonic_button {
+        width:36vw;
+    }
+    input[type="number"] {
+        width:10vw;
+        margin-right:5vw;
+    }
+    textarea {
+        font-size:1.4em;
+    }
 }
